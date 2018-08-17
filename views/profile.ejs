@@ -29,6 +29,10 @@
                 padding: 10px;
                 display: block;
             }
+            #thumbnail {
+                float: right;
+                margin-top: -45px;
+            }
             main, header{
                 max-width: 960px;
                 margin: 30px auto;
@@ -54,12 +58,10 @@
                 <% } %>
                 <li><a href="/">Homepage</a></li>
             </ul>   
+            <img id="thumbnail" src="<%= user.thumbnail %>" alt="thumbnail">
         </nav>
         <header>
-            <h1>Login using...</h1>
+            <h1>Welcome to your profile, <%= user.username %></h1>
         </header>
-        <main>
-            <a href="/auth/google" class="google-btn">Google+</a>
-        </main>
     </body>
 </html>
